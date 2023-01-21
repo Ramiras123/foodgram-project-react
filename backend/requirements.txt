@@ -36,4 +36,4 @@ typing-extensions==4.2.0
 uritemplate==4.1.1
 urllib3==1.26.9
 zipp==3.8.0
-dotenv==0.21.1
+dotenv==0.0.5
