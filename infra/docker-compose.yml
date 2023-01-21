@@ -9,7 +9,7 @@ services:
       - ./.env
 
   backend:
-    image: ramiras/foodgram-backend:v1.2
+    image: ramiras/foodgram-backend:latest
     restart: always
     volumes:
       - static_value:/app/static/
@@ -20,7 +20,7 @@ services:
       - ./.env
 
   frontend:
-    image: ramiras/foodgram-frontend:v1.2
+    image: ramiras/foodgram-frontend:latest
     volumes:
       - ../frontend/:/app/result_build/
     depends_on:

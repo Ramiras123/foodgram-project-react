@@ -56,7 +56,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull ramiras/foodgram-backend:latest
-            sudo docker pull ramiras/foodgram-frontend:v1.2
+            sudo docker pull ramiras/foodgram-frontend:latest
             sudo docker-compose stop
             sudo docker-compose rm backend
             sudo docker-compose rm frontend
