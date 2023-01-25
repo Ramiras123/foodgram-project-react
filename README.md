@@ -26,6 +26,18 @@ git clone https://github.com/Ramiras123/foodgram-project-react.git && cd foodgra
 
 Для работы с проектом в контейнерах должен быть установлен Docker и docker-compose.  
 
+Файл .env должен быть:
+```
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=postgres
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+DB_HOST=db
+DB_PORT=5432
+ALLOWED_HOSTS=\"backend 127.0.0.1\" - Ваш ip
+SECRET_KEY='636+rd4r*17p7tow(5ku_$9vf#i^%v0@7^p2-(8wk6d!=7k5=b'
+DEBUG = 0
+```
 
 ### Развертывание приложения
 
