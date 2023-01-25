@@ -33,9 +33,9 @@ git clone https://github.com/Ramiras123/foodgram-project-react.git && cd foodgra
 ```
 cd infra/ && docker-compose up -d --build
 ```
-2. Необходимо выполнить миграции и собрать статику приложения, для этого запустите скрипт
+2. Необходимо выполнить миграции, для этого запустите скрипт
 ```
-docker exec -ti shamiev_backend_1 python manage.py migrate
+sudo docker compose exec backend python manage.py migrate
 ```
 3. Для отображения всех статических файлов необходимо собрать статитику
 ```
@@ -43,7 +43,7 @@ sudo docker-compose exec backend python manage.py collectstatic --no-input
 ```
 4. Для использования панели администратора по адресу http://localhost/admin/ необходимо создать суперпользователя.
 ```
-sudo docker exec -it shamiev_backend_1 python manage.py createsuperuser
+sudo docker compose exec backend python manage.py createsuperuser
 ```
 5. Для более удобной работы заранее подготовлен дата сет ингредиентов
 ```
