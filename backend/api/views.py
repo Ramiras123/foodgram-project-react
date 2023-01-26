@@ -174,7 +174,6 @@ class ShoppingCartView(APIView):
 
 @api_view(['GET'])
 def download_shopping_cart(request):
-    user = User.objects.get(pk=request.user)
     ingredient_list = "Cписок покупок:"
     ingredients = RecipeIngredient.objects.filter(
         recipe__shopping_cart__user=request.user
@@ -188,7 +187,7 @@ def download_shopping_cart(request):
         )
         if num < ingredients.count() - 1:
             ingredient_list += ', '
-    file = f'{user.username}_shopping_list.txt'
+    file = 'shopping_list.txt'
     response = HttpResponse(ingredient_list, content_type="text.txt; charset=utf-8")
     response['Content-Disposition'] = f'attachment; filename="{file}.pdf"'
     return response
